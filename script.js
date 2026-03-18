@@ -18,14 +18,14 @@ import {
   onAuthStateChanged
 } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
 
-// COLE A SUA CONFIG COMPLETA DO FIREBASE AQUI
+
 const firebaseConfig = {
-  apiKey: "AIzaSyB74UJG66CbS-GElWCLrQURSGYKyr_l63k",
+  apiKey: "*************",
   authDomain: "todo-saas-thiago.firebaseapp.com",
   projectId: "todo-saas-thiago",
-  storageBucket: "todo-saas-thiago.firebasestorage.app",
-  messagingSenderId: "355861030222",
-  appId: "1:355861030222:web:cf9185bd102d324473ea1f"
+  storageBucket: "*******************",
+  messagingSenderId: "***************",
+  appId: "**************"
 };
 
 const app = initializeApp(firebaseConfig);
