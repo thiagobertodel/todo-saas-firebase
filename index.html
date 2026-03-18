@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do SaaS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <div class="app-card">
+      <div class="top-bar">
+        <div>
+          <h1>LISTA DE TAREFAS</h1>
+        </div>
+
+        <div class="top-actions">
+          <button class="login-btn" onclick="login()">Entrar com Google</button>
+          <button class="logout-btn" onclick="logout()">Sair</button>
+        </div>
+      </div>
+
+      <p id="user" class="user-info">Você ainda não fez login.</p>
+
+      <div class="stats">
+        <div class="stat-box">
+          <span>Total</span>
+          <strong id="totalCount">0</strong>
+        </div>
+        <div class="stat-box">
+          <span>Concluídas</span>
+          <strong id="doneCount">0</strong>
+        </div>
+        <div class="stat-box">
+          <span>Pendentes</span>
+          <strong id="pendingCount">0</strong>
+        </div>
+      </div>
+
+      <div class="input-area">
+        <input id="taskInput" type="text" placeholder="Digite uma tarefa...">
+
+        <select id="priorityInput">
+          <option value="baixa">Prioridade baixa</option>
+          <option value="media" selected>Prioridade média</option>
+          <option value="alta">Prioridade alta</option>
+        </select>
+
+        <button onclick="addTask()">Adicionar</button>
+      </div>
+
+      <div class="toolbar">
+        <select id="filter">
+          <option value="all">Todas</option>
+          <option value="done">Concluídas</option>
+          <option value="pending">Pendentes</option>
+          <option value="high">Alta prioridade</option>
+        </select>
+      </div>
+
+      <div id="loading" class="loading hidden">Carregando...</div>
+
+      <ul id="taskList"></ul>
+
+      <div id="emptyState" class="empty-state hidden">
+        <div class="empty-icon">📝</div>
+        <h3>Nenhuma tarefa por aqui</h3>
+        <p>Adicione sua primeira tarefa para começar.</p>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
